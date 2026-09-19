@@ -1,0 +1,17 @@
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ── 编辑器 / 系统 ──
+.vscode/
+.idea/
+.DS_Store
+
+# ── 模型权重（223 MB，超出 GitHub 100 MB 限制；可用 train.py 重新生成）──
+*.pth
+*.pt
+
+# ── 日志 ──
+*.log
