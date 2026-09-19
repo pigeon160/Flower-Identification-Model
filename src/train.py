@@ -1,6 +1,8 @@
 """
 模型训练并存储、画图
 """
+import random
+import numpy as np
 import torch as th
 import matplotlib
 matplotlib.use("Agg")      
@@ -14,7 +16,13 @@ BATCH_SIZE = 64
 EPOCHS = 80
 LR = 1e-3
 WEIGHT_DECAY = 1e-4
-th.manual_seed(SEED)
+
+# 设置随机种子保证可复现
+def set_seed(seed):
+  random.seed(seed)
+  np.random.seed(seed)
+  th.manual_seed(seed)
+set_seed(SEED)
 
 # 读数据、加载出训练集和验证集
 meta = load_meta()
